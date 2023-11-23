@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body{
+    background-image: url(https://www.eusemfronteiras.com.br/wp-content/uploads/2019/10/mar.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+img{
+    width: 300px;
+    position: absolute;
+    bottom: 5px;
+    animation-name: movimentar;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(.66,.29,1,.9);
+    animation-delay: 1.5s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    /*animation-fill-mode:forwards;*/
+    /*animation-play-state: paused;*/
+}
+
+img:hover{
+    animation-play-state: paused;
+}
+@keyframes movimentar {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(calc(100vw - 200px));
+    }
+}
